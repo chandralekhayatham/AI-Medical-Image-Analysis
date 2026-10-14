@@ -1,0 +1,31 @@
+{
+  "accuracy": 0.7516025641025641,
+  "classification_report": {
+    "NORMAL": {
+      "precision": 0.6612244897959184,
+      "recall": 0.6923076923076923,
+      "f1-score": 0.6764091858037579,
+      "support": 234.0
+    },
+    "PNEUMONIA": {
+      "precision": 0.8100263852242744,
+      "recall": 0.7871794871794872,
+      "f1-score": 0.7984395318595578,
+      "support": 390.0
+    },
+    "accuracy": 0.7516025641025641,
+    "macro avg": {
+      "precision": 0.7356254375100963,
+      "recall": 0.7397435897435898,
+      "f1-score": 0.7374243588316578,
+      "support": 624.0
+    },
+    "weighted avg": {
+      "precision": 0.7542256744386409,
+      "recall": 0.7516025641025641,
+      "f1-score": 0.7526781520886329,
+      "support": 624.0
+    }
+  },
+  "note": "Educational evaluation only; not clinical validation."
+}

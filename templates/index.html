@@ -1,0 +1,12 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MedVision | AI Image Analysis</title><link rel="stylesheet" href="{{url_for('static',filename='style.css')}}"></head>
+<body><header><b>🩻 MedVision</b><span> AI Image Analysis</span></header><main>
+<p class="tag">STUDENT COMPUTER VISION PROJECT</p><h1>Medical Image Analysis</h1>
+<p class="sub">An educational demonstration of CNN-based chest X-ray classification.</p>
+<div class="warning"><b>Important:</b> This is not a medical device. Do not use it for diagnosis or treatment.</div>
+<section><h2>Analyze an image</h2><p>Choose a public-dataset sample image (JPG/PNG, maximum 8 MB).</p>
+<form method="post" enctype="multipart/form-data"><label for="image">Chest X-ray image</label><input id="image" name="image" type="file" accept=".png,.jpg,.jpeg" required><button>Analyze educational sample</button></form>
+{% if error %}<p class="error">{{error}}</p>{% endif %}{% if message %}<p class="info">{{message}}</p>{% endif %}
+{% if result %}<div class="result"><p class="tag">MODEL OUTPUT — NOT A DIAGNOSIS</p><h2>{{result.label}}</h2><p>Raw sigmoid score: {{result.score}}</p><p>This is not a calibrated clinical probability. Seek qualified medical advice for health concerns.</p></div>{% endif %}</section>
+<div class="cards"><section><h3>1. Preprocess</h3><p>Grayscale, resize, normalize.</p></section><section><h3>2. Classify</h3><p>A CNN learns patterns from labelled training images.</p></section><section><h3>3. Evaluate</h3><p>Review precision, recall and confusion matrix.</p></section></div>
+</main><footer>Educational prototype • No clinical use</footer></body></html>
